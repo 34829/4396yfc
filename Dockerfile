@@ -44,6 +44,8 @@ RUN \
 RUN git config --global --add safe.directory "*"
 
 EXPOSE 8000
+RUN mkdir data
+CMD ["node", "server.js"]
 
 # Ensure proper handling of kernel signals
 ENTRYPOINT ["tini", "--", "./docker-entrypoint.sh"]
