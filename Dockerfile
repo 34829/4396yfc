@@ -43,6 +43,9 @@ RUN \
 # Fix extension repos permissions
 RUN git config --global --add safe.directory "*"
 
+RUN git clone https://github.com/N0VI028/JS-Slash-Runner.git
+RUN git clone https://github.com/zonde306/ST-Prompt-Template
+
 EXPOSE 8000
 RUN mkdir data
 CMD ["node", "server.js"]
